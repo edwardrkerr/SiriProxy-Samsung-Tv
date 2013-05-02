@@ -16,13 +16,17 @@ As with SiriProxy itself, this plugin is still in pre-alpha stage, although each
 Set up instructions
 -------------------
 - Create a plugins folder if you don't already have one:
+
 	`mkdir ~/.siriproxy/plugins`
 
 - Pull the plugin from the repo:
+
 	`git clone git@bitbucket.org:edwardrkerr/siriproxy-samsung-tv.git`
 
 - Add the example configuration to the master config.yml file:
+
 	'cat siriproxy-samsung-tv/config-info.yml >> ~/.siriproxy/config.yml'
 
 -  Edit the config.yml as required.     **Note: Make sure to line up the column spacing.**
+
 	`vim ~/.siriproxy/config.yml`
