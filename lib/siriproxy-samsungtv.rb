@@ -33,7 +33,7 @@ class SiriProxy::Plugin::SamsungTv < SiriProxy::Plugin
 	say "Sending the signal..."
 
 	Thread.new {
-	      status = system("./tv.pl key=POWEROFF")
+	      status = system("cd ~/.siriproxy/plugins/siriproxy-samsungtv/ && ./tv.pl key=POWEROFF")
 
 	      if status
 		say "Samsung has powered down."
@@ -63,7 +63,7 @@ class SiriProxy::Plugin::SamsungTv < SiriProxy::Plugin
 	end
 
 	Thread.new {
-	      status = system("./tv.pl key=#{key}")
+	      status = system("cd ~/.siriproxy/plugins/siriproxy-samsungtv/ && ./tv.pl key=#{key}")
 
 	      if status
 		if returnText.length > 0
@@ -94,7 +94,7 @@ class SiriProxy::Plugin::SamsungTv < SiriProxy::Plugin
 	      i = 0
 	      while i < number
 		      i += 1
-		      status = system("./tv.pl key=VOL#{direction.upcase}")
+		      status = system("cd ~/.siriproxy/plugins/siriproxy-samsungtv/ && ./tv.pl key=VOL#{direction.upcase}")
 	      end
 
 	      if status
